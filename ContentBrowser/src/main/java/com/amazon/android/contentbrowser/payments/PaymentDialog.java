@@ -28,23 +28,15 @@ public class PaymentDialog {
                                               Content content,
                                               DialogInterface.OnClickListener onClickListener)
             throws Exception {
-        final double price;
-        if (PRICE_MAP.containsKey(content.getId())) {
-            String string = context.getString(PRICE_MAP.get(content.getId()));
-            price = Double.parseDouble(string.substring(1)); // remove $.
-        } else {
-            throw new Exception("Could not find price for item: " + content.getId() + ". This needs to be added to the PRICE_MAP.");
-        }
 
         ViewGroup subView = (ViewGroup) context.getLayoutInflater().// inflater view
                 inflate(R.layout.pay_id_input_dialog, null, false);
 
         TextView purchaseText = subView.findViewById(R.id.pay_id_text);
-        purchaseText.setText(String.format(Locale.US, "Scan with your mobile wallet to complete purchase of %s.", content.getTitle()));
+        purchaseText.setText(String.format(Locale.US, "Scan with your mobile wallet to give funding to %s.", content.getTitle()));
 
         TextView conversionText = subView.findViewById(R.id.conversion_text);
-        final String text = String.format(Locale.US, "Base Price: $%.2f\nUser: %s\nServer: %s\n\nPay for this item by scanning one of the below QR codes:",
-                price, content.getPayIdUserName(), Fundable_SERVER);
+        final String text = String.format(Locale.US, "Fund by scanning one of the below QR codes:");
         conversionText.setText(text);
 
         final String finalXrpAddress = XRP_ADDRESS;
@@ -60,7 +52,7 @@ public class PaymentDialog {
 
             new AlertDialog.Builder(context)
                     .setView(subView)
-                    .setTitle("Scan address to complete purchase")
+                    .setTitle("Scan the XRP address to continue")
                     .setPositiveButton("Done", onClickListener)
                     .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.cancel())
                     .show();

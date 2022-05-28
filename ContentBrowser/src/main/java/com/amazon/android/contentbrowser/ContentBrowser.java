@@ -1347,16 +1347,8 @@ public class ContentBrowser implements IContentBrowser, ICancellableLoad {
         // 5001-5004
         // 4991-4995
 
-        if (PRICE_MAP.containsKey(content.getId())) {
-            Integer priceResourceId = PRICE_MAP.get(content.getId());
-            if (priceResourceId != null) {
-                contentActionList.add(createActionButton(CONTENT_ACTION_BUY,
-                        R.string.buy_0,
-                        priceResourceId
-                ));
-                content.setPrice(priceResourceId);
-            }
-        } else if (mSubscribed || isSubscriptionNotRequired || mIAPDisabled) {
+//            content.setPrice(priceResourceId);
+        if (mSubscribed || isSubscriptionNotRequired || mIAPDisabled) {
 
             // Check if the content is meant for live watching. Live content requires only a
             // watch now button.
@@ -1400,6 +1392,8 @@ public class ContentBrowser implements IContentBrowser, ICancellableLoad {
                     R.string.daily_pass_1,
                     R.string.daily_pass_2));
         }
+
+        contentActionList.add( new Action().setId(CONTENT_ACTION_BUY).setLabel1("Fund").setLabel2("project"));
 
         contentActionList.addAll(mGlobalContentActionList);
 
