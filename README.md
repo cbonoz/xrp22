@@ -1,11 +1,12 @@
 <p align='center'>
-	<img src="./img/logo.png"/>
+<img src="./img/logo.png" width=300/>
 </p>
+<br/>
 
-RippleFund
+Fundable
 ---
 
-RippleFund  - A FireTV app for engaging with live content and supporting content creators such as musicians and streamers.
+Fundable  - A FireTV app for engaging with live content and supporting content creators such as musicians and streamers.
 
 ### Technical
 Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC / Websocket). 
