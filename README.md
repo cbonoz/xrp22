@@ -13,7 +13,20 @@ Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC
 
 ### Screenshots
 
+#### Loading
+<img src="./img/load.png"/>
 
+#### Main screen
+<img src="./img/main.png"/>
+
+#### Project detail screen
+<img src="./img/detail.png"/>
+
+#### View pitch videos from entrepreneurs.
+<img src="./img/v1.png"/>
+
+#### Fund projects that you believe in.
+<img src="./img/fund.png"/>
 ### Dev Notes
 * https://xrpl.org/get-started-using-java.html
 
