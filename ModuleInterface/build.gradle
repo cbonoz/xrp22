@@ -53,6 +53,8 @@ dependencies {
     // Set this dependency to use JUnit 4 rules
     androidTestCompile 'com.android.support.test:rules:0.4.1'
 
+//    compile("androidx.multidex:multidex:2.0.1")
+
     androidTestCompile('com.android.support.test:runner:0.4.1') {
         exclude module: 'support-annotations'
     }

@@ -12,6 +12,10 @@ Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC
 
 ### Screenshots
 
+
+### Dev Notes
+* https://xrpl.org/get-started-using-java.html
+
 ### Useful links
 * https://xrpl.org/xrp-testnet-faucet.html
 

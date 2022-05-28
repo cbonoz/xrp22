@@ -24,6 +24,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.multidex.MultiDex;
+
 
 /**
  * Base class for a modular application.
@@ -62,6 +64,8 @@ public abstract class ModularApplication extends Application {
 
         super.onCreate();
         Log.d(TAG, "onCreate called.");
+//        MultiDex.install(this);
+
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 
             @Override
