@@ -22,8 +22,8 @@ public class InputDialog {
                 .setView(subView)
                 .setTitle("Wallet information")
                 .setPositiveButton("Ok", (dialogInterface, i) -> {
-                    EditText text = subView.findViewById(R.id.wallet_seed_input);
-                    setWalletSeed(text.toString());
+//                    EditText text = subView.findViewById(R.id.wallet_seed_input);
+//                    setWalletSeed(text.toString());
                     dialogInterface.dismiss();
                 })
                 .setNegativeButton("Back", (dialogInterface, i) -> dialogInterface.cancel())

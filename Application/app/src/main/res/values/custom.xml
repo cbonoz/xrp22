@@ -69,7 +69,7 @@ permissions and limitations under the License.
     <!-- Browse Customization -->
 
     <!-- Company logo -->
-    <drawable name="company_logo">@drawable/logo_3_2</drawable>
+    <drawable name="company_logo">@drawable/logo_trans</drawable>
     <!-- App icon -->
     <drawable name="app_logo">@mipmap/ic_launcher</drawable>
     <!-- App banner. Note: Used for Google Play Store -->
