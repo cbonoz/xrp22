@@ -21,10 +21,10 @@ public class PayIdHelper {
     // The expected address of the gRPC server.
     static final String XRP_URL = "test.xrp.xpring.io:50051";
     static final String BTC_NETWORK = "btc-testnet";
-    static final String RippleFund_SERVER = "RippleFund.sandbox.payid.org";
+    static final String Fundable_SERVER = "Fundable.sandbox.payid.org";
 
     public static String createPayIdUrl(String userName) {
-        return String.format("%s$%s", userName, RippleFund_SERVER);
+        return String.format("%s$%s", userName, Fundable_SERVER);
     }
 
     static final String TEST_MNEMONIC = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";

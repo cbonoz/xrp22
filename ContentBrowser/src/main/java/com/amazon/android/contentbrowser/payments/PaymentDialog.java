@@ -26,7 +26,7 @@ import okhttp3.Response;
 import static com.amazon.android.contentbrowser.ContentBrowser.PRICE_MAP;
 import static com.amazon.android.contentbrowser.app.ContentBrowserApplication.GSON;
 import static com.amazon.android.contentbrowser.payments.PayIdHelper.HTTP_CLIENT;
-import static com.amazon.android.contentbrowser.payments.PayIdHelper.RippleFund_SERVER;
+import static com.amazon.android.contentbrowser.payments.PayIdHelper.Fundable_SERVER;
 import static com.amazon.android.contentbrowser.payments.PayIdHelper.createPayIdUrl;
 import static com.amazon.android.contentbrowser.payments.PayIdHelper.getAddresses;
 
@@ -54,7 +54,7 @@ public class PaymentDialog {
         TextView conversionText = subView.findViewById(R.id.conversion_text);
         final String payId = createPayIdUrl(content.getPayIdUserName());
         final String text = String.format(Locale.US, "Base Price: $%.2f\nUser: %s\nServer: %s\n\nPay for this item by scanning one of the below QR codes:",
-                price, content.getPayIdUserName(), RippleFund_SERVER);
+                price, content.getPayIdUserName(), Fundable_SERVER);
         conversionText.setText(text);
 
         getAddresses(payId, new Callback() {
