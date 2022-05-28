@@ -25,8 +25,10 @@ Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC
 #### View pitch videos from entrepreneurs.
 <img src="./img/v1.png"/>
 
-#### Fund projects that you believe in.
-<img src="./img/fund.png"/>
+#### Fund projects that you believe in. Use the unique QR code to pay from your mobile device.
+<img src="./img/qr.png"/>
+
+
 ### Dev Notes
 * https://xrpl.org/get-started-using-java.html
 
