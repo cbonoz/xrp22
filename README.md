@@ -8,6 +8,8 @@ Fundable
 
 Fundable  - A FireTV app for engaging with live content and supporting content creators such as musicians and streamers.
 
+Built for the <a href="https://xrplimpact.devpost.com/" target="_blank">XRPL Hackathon 2022</a>
+
 ### Technical
 Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC / Websocket). 
 
