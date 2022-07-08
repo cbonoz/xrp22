@@ -23,17 +23,16 @@ Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC
 <img src="./img/detail.png"/>
 
 #### View pitch videos from entrepreneurs.
-<img src="./img/v1.png"/>
+<img src="./img/video.png"/>
 
 #### Fund projects that you believe in. Use the unique QR code to pay from your mobile device.
 <img src="./img/qrcode.png"/>
 
-
 #### Complete donations from your mobile device
-<img src="./img/pay.png"/>
+<img src="./img/pay.png" width=325 />
 
 #### Successful payment
-<img src="./img/done.png"/>
+<img src="./img/done.png" width=325/>
 
 
 
