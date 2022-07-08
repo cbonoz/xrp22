@@ -47,6 +47,7 @@
 
             <ImageView
                 android:id="@+id/xrpImage"
+                android:src="@drawable/ic_alert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

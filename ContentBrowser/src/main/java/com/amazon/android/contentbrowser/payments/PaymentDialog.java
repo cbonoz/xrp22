@@ -5,15 +5,15 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amazon.android.contentbrowser.R;
 import com.amazon.android.model.content.Content;
-import com.squareup.picasso.OkHttp3Downloader;
-import com.squareup.picasso.Picasso;
 
+import java.lang.reflect.Field;
 import java.util.Locale;
 
 import static com.amazon.android.contentbrowser.ContentBrowser.PRICE_MAP;
@@ -23,6 +23,16 @@ import static com.amazon.android.contentbrowser.payments.PayIdHelper.HTTP_CLIENT
 
 public class PaymentDialog {
 
+    public static int getResId(String resName, Class<?> c) {
+
+        try {
+            Field idField = c.getDeclaredField(resName);
+            return idField.getInt(idField);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
 
     public static void createPayIdInputDialog(Activity context,
                                               Content content,
@@ -39,16 +49,12 @@ public class PaymentDialog {
         final String text = String.format(Locale.US, "Fund by scanning one of the below QR codes:");
         conversionText.setText(text);
 
-        final String finalXrpAddress = XRP_ADDRESS;
-        Picasso picasso = new Picasso.Builder(context).downloader(new OkHttp3Downloader(HTTP_CLIENT)).build();
-        picasso.setLoggingEnabled(true);
-        new Handler(Looper.getMainLooper()).post(() -> {
+        ImageView v = subView.findViewById(R.id.xrpImage);
+        int resID = getResId("qrcode" + content.getId(), R.drawable.class);
+        v.setImageResource(resID);
+        Log.d("createPayIdInputDialog", content.toString());
 
-            if (finalXrpAddress != null) {
-                String url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + finalXrpAddress;
-                ImageView v = subView.findViewById(R.id.xrpImage);
-                picasso.load(url).into(v);
-            }
+        new Handler(Looper.getMainLooper()).post(() -> {
 
             new AlertDialog.Builder(context)
                     .setView(subView)
