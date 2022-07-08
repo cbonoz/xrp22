@@ -41,12 +41,11 @@ public class PaymentDialog {
 
         ViewGroup subView = (ViewGroup) context.getLayoutInflater().// inflater view
                 inflate(R.layout.pay_id_input_dialog, null, false);
-
         TextView purchaseText = subView.findViewById(R.id.pay_id_text);
-        purchaseText.setText(String.format(Locale.US, "Scan with your mobile wallet to give funding to %s.", content.getTitle()));
+        purchaseText.setText(String.format(Locale.US, "Scan the QR code below with your mobile wallet to give funding to\n%s.", content.getTitle()));
 
         TextView conversionText = subView.findViewById(R.id.conversion_text);
-        final String text = String.format(Locale.US, "Fund by scanning one of the below QR codes:");
+        final String text = String.format(Locale.US, "You'll be able to specify the amount and receive a transaction receipt post-payment!");
         conversionText.setText(text);
 
         ImageView v = subView.findViewById(R.id.xrpImage);
@@ -55,7 +54,6 @@ public class PaymentDialog {
         Log.d("createPayIdInputDialog", content.toString());
 
         new Handler(Looper.getMainLooper()).post(() -> {
-
             new AlertDialog.Builder(context)
                     .setView(subView)
                     .setTitle("Scan the XRP address to continue")
