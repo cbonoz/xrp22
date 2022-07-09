@@ -6,7 +6,7 @@
 Fundable
 ---
 
-Fundable  - A FireTV app for engaging with live content and supporting content creators such as musicians and streamers.
+Fundable - A prototype FireTV app for engaging with live content and supporting content creators, entrepreneurs, and businesses wherever they are with frictionless payments using XRP.
 
 Built for the <a href="https://xrplimpact.devpost.com/" target="_blank">XRPL Hackathon 2022</a>
 
