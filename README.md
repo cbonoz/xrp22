@@ -10,9 +10,6 @@ Fundable  - A FireTV app for engaging with live content and supporting content c
 
 Built for the <a href="https://xrplimpact.devpost.com/" target="_blank">XRPL Hackathon 2022</a>
 
-Fundable
----
-
 ## Inspiration
 
 Fundable aims to help aspiring entrepreneurs by allowing charitable lenders with tools to get resources to those that need them the most and maximize the impact of a loan by automatically relending funds once they are repaid. With crowd-sourced micro-loans, students can pay for tuition, women can start businesses, farmers are able to invest in equipment and families can afford needed emergency care. With all transactions taking place on the blockchain, lenders benefit from increased accountability and borrowers can establish credit.
@@ -35,7 +32,7 @@ Combination of the Xpring SDK, XRP Testnet, and the XRPL specification (JSON RPC
 
 ### Screenshots
 
-#### Loading
+#### Splash screen
 <img src="./img/load.png"/>
 
 #### Main project discovery screen
